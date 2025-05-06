@@ -19,6 +19,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     header h1 {
@@ -37,35 +38,31 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-align: center;
-      padding: 4rem 2rem;
-      background: url('background2.jpg') no-repeat center center;
+      padding: 3rem 2rem 1rem;
+      background: url('background2.jpg') no-repeat center center fixed;
       background-size: cover;
+      text-align: center;
     }
 
-    .hero-text {
-      max-width: 700px;
-    }
-
-    .hero-text h2 {
+    .hero h2 {
       font-size: 3rem;
-      padding: 1rem 0;
       color: #FBF8EF;
+      margin-bottom: 1rem;
     }
 
-    .hero-text p {
-      font-size: 1.2rem;
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 600px;
       color: #cbd5e1;
-      margin-top: -1rem;
     }
 
     .hero-image {
       margin-top: 2rem;
+      max-width: 750px;
     }
 
     .hero-image img {
       width: 100%;
-      max-width: 750px;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(56, 189, 248, 0.1);
       opacity: 0.95;
@@ -73,7 +70,7 @@
 
     .videos {
       padding: 3rem 2rem;
-      background: url('cont.jpg') no-repeat center center;
+      background: url('cont.jpg') no-repeat center center fixed;
       background-size: cover;
     }
 
@@ -110,7 +107,7 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      background: url('background_banner.jpg') no-repeat center center;
+      background: url('background_banner.jpg') no-repeat center center fixed;
       background-size: cover;
     }
 
@@ -118,7 +115,7 @@
       flex: 1;
       max-width: 500px;
       color: #FBF8EF;
-      margin: 1rem;
+      margin-left: 2rem;
     }
 
     .banner-text h3 {
@@ -138,11 +135,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 1rem;
+      margin-top: 2rem;
     }
 
     .banner-image img {
-      max-width: 100%;
+      max-width: 800px;
+      width: 100%;
       height: auto;
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -153,12 +151,14 @@
       padding: 3rem 2rem;
       display: flex;
       flex-direction: column;
-      background: url('background_banner.jpg') no-repeat center center;
+      align-items: center;
+      background: url('background_banner.jpg') no-repeat center center fixed;
       background-size: cover;
+      text-align: center;
     }
 
     .presentation-text {
-      max-width: 600px;
+      max-width: 500px;
       color: #FBF8EF;
       margin-bottom: 2rem;
     }
@@ -177,20 +177,19 @@
 
     .presentation-downloads {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
       gap: 2rem;
-      justify-content: center;
+      width: 100%;
+      max-width: 500px;
     }
 
-    .download-box {
+    .download-box {  
       background-color: #1e3a8a;
       padding: 1.5rem;
       border-radius: 12px;
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 225px;
+      width: 100%;
       box-sizing: border-box;
     }
 
@@ -210,7 +209,7 @@
     }
 
     .contributors-section {
-      background: url('cont2.jpg') no-repeat center center;
+      background: url('cont2.jpg') no-repeat center center fixed;
       background-size: cover;
       padding: 3rem 2rem;
       text-align: center;
@@ -247,29 +246,35 @@
     }
 
     @media (max-width: 800px) {
-      .hero-text h2 {
-        font-size: 2rem;
-      }
-
-      .hero-text p {
-        font-size: 1rem;
-      }
-
-      .video-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .banner-section,
-      .presentation-section {
+      header {
         flex-direction: column;
-        align-items: center;
         text-align: center;
       }
 
-      .banner-image,
+      nav a {
+        margin: 0.5rem;
+      }
+
+      .banner-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
       .banner-text,
-      .presentation-text {
-        margin: 1rem 0;
+      .banner-image {
+        margin-left: 0;
+      }
+
+      .hero h2 {
+        font-size: 2.25rem;
+      }
+
+      .presentation-downloads {
+        width: 100%;
+      }
+
+      .download-box {
+        width: 90%;
       }
     }
   </style>
@@ -288,10 +293,8 @@
 
   <!-- Hero Section -->
   <div class="hero">
-    <div class="hero-text">
-      <h2>Understanding ACL Rehabilitation</h2>
-      <p>This project explores the full recovery journey following an ACL injury. It covers clinical phases, therapeutic methods, and tools used during rehabilitation to guide patients back to optimal movement and performance.</p>
-    </div>
+    <h2>Understanding ACL Rehabilitation</h2>
+    <p>This project provides an overview of the anterior cruciate ligament (ACL) rehabilitation process. It highlights injury mechanisms, therapy techniques, and recovery timelines, aiming to inform patients, students, and practitioners alike.</p>
     <div class="hero-image">
       <img src="athlete_knees.jpg" alt="Athlete Knees" />
     </div>
@@ -369,3 +372,4 @@
   </footer>
 </body>
 </html>
+
