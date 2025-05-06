@@ -100,7 +100,11 @@
        color: #FBF8EF;
      }
  
-     
+     .video-grid {
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+       gap: 2rem;
      }
  
      .video iframe {
@@ -347,7 +351,36 @@
    </div>
  
    <!-- Video Section -->
-
+   <section class="videos" id="videos">
+     <h3>ACL Recovery Stages</h3>
+     <div class="video-grid">
+       <div class="video">
+         <iframe src="https://www.youtube.com/embed/NjE3j9T1N4I" title="Test for ACL injury" allowfullscreen></iframe>
+         <p>Test for ACL injury</p>
+       </div>
+       <div class="video">
+         <iframe src="https://www.youtube.com/embed/eWceE2WK74A" title="ACL Mechanism" allowfullscreen></iframe>
+         <p>ACL Mechanism</p>
+       </div>
+       <div class="video">
+         <iframe src="https://www.youtube.com/embed/fgLmeajvzzI" title="Electro Therapy" allowfullscreen></iframe>
+         <p>Electro Therapy</p>
+       </div>
+       <div class="video">
+         <iframe src="https://www.youtube.com/embed/yqWKzJJMyTY" title="Exercises After Surgery" allowfullscreen></iframe>
+         <p>Exercises After Surgery</p>
+       </div>
+       <div class="video">
+         <iframe src="https://www.youtube.com/embed/0bBEa22Dus0" title="Hydrotherapy" allowfullscreen></iframe>
+         <p>Hydrotherapy</p>
+       </div>
+       <div class="video">
+         <iframe src="https://www.youtube.com/embed/ufU6EH-rVGw" title="Biomechanics of Knee" allowfullscreen></iframe>
+         <p>Biomechanics of Knee</p>
+       </div>
+     </div>
+   </section>
+ 
    <!-- Banner Section -->
    <section class="banner-section" id="banner">
      <div class="banner-text">
