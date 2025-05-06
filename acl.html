@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Understanding ACL Rehabilitation</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'DM Sans', sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+
+    header {
+      background: #000;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #FBF8EF;
+    }
+
+    nav a {
+      color: #FBF8EF;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6rem 2rem 4rem 2rem;
+      background: url('background2.jpg') no-repeat center center fixed;
+      background-size: cover;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1;
+      max-width: 600px;
+    }
+
+    .hero-text h2 {
+      font-size: 3rem;
+      padding: 1rem 0;
+      color: #FBF8EF;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #f1f5f9;
+    }
+
+    .hero-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 750px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.1);
+      opacity: 0.95;
+    }
+
+    .videos {
+      padding: 3rem 2rem;
+      background: url('cont.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .videos h3 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: #FBF8EF;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .video iframe {
+      width: 100%;
+      height: 275px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .video p {
+      margin-top: 0.8rem;
+      font-weight: 600;
+      color: #f8fafc;
+      text-align: center;
+    }
+
+    .banner-section {
+      padding: 3rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      background: url('background_banner.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .banner-text {
+      flex: 1;
+      max-width: 500px;
+      color: #FBF8EF;
+      margin-left: 2rem;
+    }
+
+    .banner-text h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #38bdf8;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+
+    .banner-text p {
+      line-height: 1.6;
+    }
+
+    .banner-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 450px;
+    }
+
+    .banner-image img {
+      max-width: 800px;
+      height: 650px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      opacity: 0.99;
+    }
+
+    .presentation-section {
+      padding: 3rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      background: url('background_banner.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .presentation-text {
+      flex: 1;
+      max-width: 500px;
+      color: #FBF8EF;
+      margin-left: 2rem;
+    }
+
+    .presentation-text h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #38bdf8;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+
+    .presentation-text p {
+      line-height: 1.6;
+    }
+
+    .presentation-downloads {
+      display: flex;
+      justify-content: flex-end;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .download-box {  
+      background-color: #1e3a8a;
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 225px;
+      min-height: 180px;
+      box-sizing: border-box;
+    }
+
+    .download-box h4 {
+      color: #fff;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .download-box a {
+      background: #000;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .contributors-section {
+      background: url('cont2.jpg') no-repeat center center fixed;
+      background-size: cover;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .contributors-section h3 {
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #38bdf8;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+
+    .contributors-section p {
+      font-size: 1.1rem;
+      color: #FBF8EF;
+    }
+
+    .contributors-section a {
+      display: block;
+      margin-top: 1rem;
+      color: #93c5fd;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #000;
+      text-align: center;
+      padding: 1rem;
+      color: #94a3b8;
+      font-weight: bold;
+    }
+
+    @media (max-width: 800px) {
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero,
+      .banner-section,
+      .presentation-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-image,
+      .banner-image,
+      .presentation-downloads {
+        margin-top: 2rem;
+        margin-left: 0 !important;
+        align-items: center;
+        padding-right: 0;
+      }
+
+      .presentation-downloads {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ACL Rehabilitation Project</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#videos">Videos</a>
+      <a href="#banner">Banner</a>
+      <a href="#presentation">Presentation</a>
+      <a href="#contributors">Contributors</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-text">
+      <h2>Understanding ACL Rehabilitation</h2>
+      <p>This project explores the journey of Anterior Cruciate Ligament (ACL) rehabilitation — from injury assessment to recovery protocols. Through videos, visuals, and a detailed presentation, it provides a clear overview of therapy techniques, recovery stages, and biomechanical principles to help patients and practitioners alike.</p>
+    </div>
+    <div class="hero-image">
+      <img src="athlete_knees.jpg" alt="Athlete Knees" />
+    </div>
+  </div>
+
+  <!-- Video Section -->
+  <section class="videos" id="videos">
+    <h3>ACL Recovery Stages</h3>
+    <div class="video-grid">
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/NjE3j9T1N4I" title="Test for ACL injury" allowfullscreen></iframe>
+        <p>Test for ACL injury</p>
+      </div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/eWceE2WK74A" title="ACL Mechanism" allowfullscreen></iframe>
+        <p>ACL Mechanism</p>
+      </div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/fgLmeajvzzI" title="Electro Therapy" allowfullscreen></iframe>
+        <p>Electro Therapy</p>
+      </div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/yqWKzJJMyTY" title="Exercises After Surgery" allowfullscreen></iframe>
+        <p>Exercises After Surgery</p>
+      </div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/0bBEa22Dus0" title="Hydrotherapy" allowfullscreen></iframe>
+        <p>Hydrotherapy</p>
+      </div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/ufU6EH-rVGw" title="Biomechanics of Knee" allowfullscreen></iframe>
+        <p>Biomechanics of Knee</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner Section -->
+  <section class="banner-section" id="banner">
+    <div class="banner-text">
+      <h3>The Banner</h3>
+      <p>This banner represents the core visual of ACL rehabilitation and highlights key phases of the recovery journey. It is meant to be informative, engaging, and impactful in its design and presentation.</p>
+    </div>
+    <div class="banner-image">
+      <img src="banner.png" alt="Banner Image" />
+    </div>
+  </section>
+
+  <!-- Presentation Section -->
+  <section class="presentation-section" id="presentation">
+    <div class="presentation-text">
+      <h3>The Presentation</h3>
+      <p>This section is dedicated to our group presentation. It summarizes the educational material and research shared during our overview of ACL rehabilitation.</p>
+    </div>
+    <div class="presentation-downloads">
+      <div class="download-box">
+        <h4>ACL Case Presentation</h4>
+        <a href="ACL Case Presentation.pdf" download>Download</a>
+      </div>
+      <div class="download-box">
+        <h4>ACL Recovery Presentation</h4>
+        <a href="ACL recovery based on therapeutic exercises principles.pdf" download>Download</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contributors Section -->
+  <section class="contributors-section" id="contributors">
+    <h3>Contributors</h3>
+    <p>This project was a collaborative effort made possible by individuals dedicated to raising awareness about ACL injuries and recovery.</p>
+    <a href="contributors.html">See full list of contributors</a>
+  </section>
+
+  <footer>
+    Designed by Abdelrahman Khater
+  </footer>
+</body>
+</html>
