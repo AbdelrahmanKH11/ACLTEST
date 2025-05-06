@@ -38,37 +38,29 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      padding: 6rem 2rem 4rem 2rem;
-      background: url('background2.jpg') no-repeat center center;
+      padding: 3rem 2rem 1rem;
+      background: url('background2.jpg') center center no-repeat;
       background-size: cover;
-      background-attachment: scroll;
-      flex-wrap: wrap;
     }
 
     .hero-text {
-      flex: 1;
       max-width: 600px;
       text-align: center;
     }
 
-    .hero h2 {
+    .hero-text h2 {
       font-size: 3rem;
       padding: 1rem 0;
       color: #FBF8EF;
-      margin-bottom: 1rem;
     }
 
-    .hero-text p,
-    .hero p {
+    .hero-text p {
       font-size: 1.2rem;
       line-height: 1.6;
       color: #f1f5f9;
-      max-width: 600px;
     }
 
     .hero-image {
-      flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -78,7 +70,6 @@
 
     .hero-image img {
       width: 100%;
-      max-width: 750px;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(56, 189, 248, 0.1);
       opacity: 0.95;
@@ -86,9 +77,8 @@
 
     .videos {
       padding: 3rem 2rem;
-      background: url('cont.jpg') no-repeat center center;
+      background: url('cont.jpg') center center no-repeat;
       background-size: cover;
-      background-attachment: scroll;
     }
 
     .videos h3 {
@@ -121,19 +111,16 @@
     .banner-section {
       padding: 3rem 2rem;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
       flex-wrap: wrap;
-      background: url('background_banner.jpg') no-repeat center center;
+      background: url('background_banner.jpg') center center no-repeat;
       background-size: cover;
-      background-attachment: scroll;
+      justify-content: center;
     }
 
     .banner-text {
-      flex: 1;
-      max-width: 500px;
+      flex: 1 1 500px;
       color: #FBF8EF;
-      margin-left: 2rem;
+      margin-right: 2rem;
     }
 
     .banner-text h3 {
@@ -149,18 +136,15 @@
     }
 
     .banner-image {
-      flex: 1;
+      flex: 1 1 500px;
       display: flex;
       justify-content: center;
-      align-items: center;
-      margin-left: 450px;
       margin-top: 2rem;
     }
 
     .banner-image img {
-      max-width: 800px;
       width: 100%;
-      height: auto;
+      max-width: 800px;
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
       opacity: 0.99;
@@ -168,22 +152,17 @@
 
     .presentation-section {
       padding: 3rem 2rem;
+      background: url('background_banner.jpg') center center no-repeat;
+      background-size: cover;
+      text-align: center;
       display: flex;
-      justify-content: space-between;
       flex-direction: column;
       align-items: center;
-      flex-wrap: wrap;
-      background: url('background_banner.jpg') no-repeat center center;
-      background-size: cover;
-      background-attachment: scroll;
-      text-align: center;
     }
 
     .presentation-text {
-      flex: 1;
-      max-width: 500px;
+      max-width: 600px;
       color: #FBF8EF;
-      margin-left: 2rem;
       margin-bottom: 2rem;
     }
 
@@ -201,14 +180,11 @@
 
     .presentation-downloads {
       display: flex;
-      justify-content: flex-end;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
       flex-wrap: wrap;
-      margin-top: 2rem;
+      justify-content: center;
+      gap: 2rem;
       width: 100%;
-      max-width: 500px;
+      max-width: 700px;
     }
 
     .download-box {
@@ -216,10 +192,11 @@
       padding: 1.5rem;
       border-radius: 12px;
       text-align: center;
+      width: 300px;
+      height: 200px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      width: 100%;
       box-sizing: border-box;
     }
 
@@ -247,10 +224,6 @@
     }
 
     @media (max-width: 800px) {
-      .video-grid {
-        grid-template-columns: 1fr;
-      }
-
       header {
         flex-direction: column;
         text-align: center;
@@ -260,33 +233,23 @@
         margin: 0.5rem;
       }
 
-      .hero,
-      .banner-section,
-      .presentation-section {
+      .banner-section {
         flex-direction: column;
         text-align: center;
       }
 
-      .hero-image,
-      .banner-image,
-      .presentation-downloads {
-        margin-top: 2rem;
-        margin-left: 0 !important;
-        align-items: center;
-        padding-right: 0;
-      }
-
       .banner-text,
       .banner-image {
-        margin-left: 0;
+        margin: 0;
       }
 
-      .hero h2 {
+      .hero-text h2 {
         font-size: 2.25rem;
       }
 
       .download-box {
         width: 90%;
+        height: auto;
       }
     }
   </style>
@@ -378,3 +341,4 @@
   </footer>
 </body>
 </html>
+
